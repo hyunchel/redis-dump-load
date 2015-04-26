@@ -16,7 +16,7 @@ matrix:
       env: TEST=slow
 install: >
   pip install -r requirements-dev.txt --use-mirrors &&
-  sudo apt-get install redis-server &&
+  sudo apt-get install redis-server yajl &&
   sudo service redis-server start
 script: >
   ./tests/travis/run.sh
